@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Programming2._3 {
   internal class Program {
@@ -148,15 +143,15 @@ namespace Programming2._3 {
       }
 
       public override string ToString() {
-        string strResult = "";
+        string stringResult = "";
         int indexI;
         int indexJ;
 
         for (indexI = 0; indexI < this.Size; ++indexI) {
           for (indexJ = 0; indexJ < this.Size; ++indexJ) {
-            strResult += this[indexI, indexJ] + ", ";
+            stringResult += this[indexI, indexJ] + ", ";
           }
-          strResult += "\n";
+          stringResult += "\n";
         }
         return strResult;
 
@@ -166,8 +161,8 @@ namespace Programming2._3 {
         int indexI;
         int indexJ;
         SquareMatrix cloneMatrix = new SquareMatrix(Size);
-        for (indexI = 0; indexI < Size; indexI++) {
-          for (indexJ = 0; indexJ < Size; indexJ++) {
+        for (indexI = 0; indexI < Size; ++indexI) {
+          for (indexJ = 0; indexJ < Size; ++indexJ) {
             cloneMatrix[indexI, indexJ] = this[indexI, indexJ];
           }
         }
